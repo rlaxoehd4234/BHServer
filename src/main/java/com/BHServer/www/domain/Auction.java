@@ -42,4 +42,16 @@ public class Auction extends BaseEntity {
     @Column(nullable = false)
     private LocalDateTime endDate;
 
+//    public static Auction of(AuctionRequestDto dto) {
+//        Auction auction = new Auction();
+//        auction.auctionName = dto.auctionName();
+//        auction.sellerId = dto.sellerId();
+//        auction.startPrice = dto.startPrice();
+//        auction.bidIncrement = dto.bidIncrement();
+//        auction.currentPrice = dto.startPrice(); // 기본값 처리
+//        auction.category = dto.category();
+//        auction.startDate = dto.startDate();
+//        auction.endDate = dto.endDate();
+//        return auction;
+//    }
 }
