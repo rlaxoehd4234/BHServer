@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/player")
 @RequiredArgsConstructor
-@Tag(name = "ÇÃ·¹ÀÌ¾î ·©Å· API", description = "ÇÃ·¹ÀÌ¾îÀÇ ·©Å· ¹× Åë°è ¿£µåÆ÷ÀÎÆ®")
+@Tag(name = "í”Œë ˆì´ì–´ ë­í‚¹ API", description = "í”Œë ˆì´ì–´ì˜ ë­í‚¹ ë° í†µê³„ ì—”ë“œí¬ì¸íŠ¸")
 public class PlayerStatsController {
     private final PlayerStatsService playerStatsService;
 
-    @Operation(summary = "Ä«Å×°í¸®º° ·©Å· Á¶È¸", description = "kills, playTime, deaths ÀÇ Ä«Å×°í¸® º° ÇÃ·¹ÀÌ¾î ·©Å·À» ¹İÈ¯ÇÕ´Ï´Ù.")
+    @Operation(summary = "ì¹´í…Œê³ ë¦¬ë³„ ë­í‚¹ ì¡°íšŒ", description = "kills, playTime, deaths ì˜ ì¹´í…Œê³ ë¦¬ ë³„ í”Œë ˆì´ì–´ ë­í‚¹ì„ ë°˜í™˜í•©ë‹ˆë‹¤.")
     @GetMapping("/ranking/{category}")
     public ResponseEntity<PlayerStatsRankingResponseDto> getRanking(@PathVariable String category){
         return ResponseEntity.ok(playerStatsService.getRankingByCategory(category));
